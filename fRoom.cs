@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class fHotelManager : Form
+    public partial class fRoom : Form
     {
-        public fHotelManager()
+        public fRoom()
         {
             InitializeComponent();
         }
 
-        
+        private void fRoom_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
