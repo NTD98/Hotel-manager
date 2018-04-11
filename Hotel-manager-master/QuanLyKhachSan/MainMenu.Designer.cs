@@ -40,10 +40,11 @@ namespace QuanLyKhachSan
             this.button8 = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.flpRoom = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpStatus = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flpStatus = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@ namespace QuanLyKhachSan
             this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox1.Location = new System.Drawing.Point(138, 28);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(630, 20);
+            this.textBox1.Size = new System.Drawing.Size(531, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -118,7 +119,7 @@ namespace QuanLyKhachSan
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(678, 181);
+            this.monthCalendar1.Location = new System.Drawing.Point(675, 248);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 11;
             // 
@@ -132,10 +133,18 @@ namespace QuanLyKhachSan
             this.flpRoom.TabIndex = 5;
             this.flpRoom.Paint += new System.Windows.Forms.PaintEventHandler(this.flpRoom_Paint);
             // 
+            // flpStatus
+            // 
+            this.flpStatus.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.flpStatus.Location = new System.Drawing.Point(138, 69);
+            this.flpStatus.Name = "flpStatus";
+            this.flpStatus.Size = new System.Drawing.Size(531, 32);
+            this.flpStatus.TabIndex = 14;
+            // 
             // button2
             // 
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(836, 18);
+            this.button2.Location = new System.Drawing.Point(852, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 49);
             this.button2.TabIndex = 13;
@@ -147,7 +156,7 @@ namespace QuanLyKhachSan
             this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(774, 18);
+            this.button1.Location = new System.Drawing.Point(675, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 49);
             this.button1.TabIndex = 2;
@@ -164,20 +173,21 @@ namespace QuanLyKhachSan
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // flpStatus
+            // panel1
             // 
-            this.flpStatus.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.flpStatus.Location = new System.Drawing.Point(138, 69);
-            this.flpStatus.Name = "flpStatus";
-            this.flpStatus.Size = new System.Drawing.Size(630, 32);
-            this.flpStatus.TabIndex = 14;
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Location = new System.Drawing.Point(675, 67);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(227, 169);
+            this.panel1.TabIndex = 15;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(909, 450);
+            this.ClientSize = new System.Drawing.Size(909, 417);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.flpStatus);
             this.Controls.Add(this.flpRoom);
             this.Controls.Add(this.button2);
@@ -214,6 +224,7 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.Button button2;
         private FlowLayoutPanel flpRoom;
         private FlowLayoutPanel flpStatus;
+        private Panel panel1;
     }
 }
 

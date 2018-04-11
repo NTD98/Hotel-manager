@@ -100,3 +100,4 @@ C:\Users\danhy\Documents\GitHub\Hotel-manager\QuanLyKhachSan\obj\Debug\QuanLyKha
 C:\Users\danhy\Documents\GitHub\Hotel-manager\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
 C:\Users\danhy\Documents\GitHub\Hotel-manager\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 C:\Users\danhy\Documents\GitHub\Hotel-manager\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\NTD\Documents\GitHub\Hotel-manager\Hotel-manager-master\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.fViewRoom.resources

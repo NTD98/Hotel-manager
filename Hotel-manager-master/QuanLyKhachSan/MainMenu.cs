@@ -32,6 +32,8 @@ namespace QuanLyKhachSan
             {
                 Button btn = new Button() { Width = RoomDAO.RoomWidth, Height = RoomDAO.RoomHeigh };
                 btn.Text = roomDTO.RoomName;
+                btn.Click += new EventHandler(btn_Click);
+                btn.Tag = roomDTO;
                 switch (roomDTO.RoomStyle)
                 {
                     case 1:
@@ -69,6 +71,16 @@ namespace QuanLyKhachSan
                 flpRoom.Controls.Add(btn);
             }
         }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            int RoomCode = ((sender as Button).Tag as RoomDTO).RoomCode;
+            this.Hide();
+            fViewRoom fView = new fViewRoom(LoadRoomInfo(RoomCode),RoomCode);
+            fView.ShowDialog();
+            this.Show();
+        }
+
         public void LoadStatusOfRooms()
         {
             int Total = 0, available = 0, inused = 0, undermaintainance = 0;
@@ -97,18 +109,22 @@ namespace QuanLyKhachSan
             Button btnAll = new Button() { Width = 100, Height = 25 };
             btnAll.Text = "Tất Cả " + Total.ToString();
             btnAll.BackColor = Color.White;
+            btnAll.Click += new EventHandler(btnAll_Click);
             //Available
             Button btnAv = new Button() { Width = 100, Height = 25 };
             btnAv.Text = "Có Thể Thuê " + available.ToString();
             btnAv.BackColor = Color.SeaGreen;
+            btnAv.Click += new EventHandler(btnAv_Click);
             //Inused
             Button btnIU = new Button() { Width = 100, Height = 25 };
             btnIU.Text = "Đã Thuê " + inused.ToString();
             btnIU.BackColor = Color.PaleVioletRed;
+            btnIU.Click += new EventHandler(btnIU_Click);
             //Undermaintainance
             Button btnMT = new Button() { Width = 100, Height = 25 };
             btnMT.Text = "Đang Sửa Chữa " + undermaintainance.ToString();
             btnMT.BackColor = Color.Yellow;
+            btnMT.Click += new EventHandler(btnMT_Click);
             flpStatus.Controls.Add(btnAll);
             flpStatus.Controls.Add(btnAv);
             flpStatus.Controls.Add(btnIU);
@@ -122,7 +138,27 @@ namespace QuanLyKhachSan
         }
         #endregion
         #region Events
-
+        public List<BillInfoDTO> LoadRoomInfo(int roomcode)
+        {
+            List<BillInfoDTO> ListBillInfo = BillInfoDAO.Instance.GetListBillInfo(BillDAO.Instance.GetBillIDByRoomcode(roomcode));
+            return ListBillInfo;
+        }
+        private void btnAll_Click(object sender,EventArgs args)
+        {
+            MessageBox.Show("btnAll");
+        }
+        private void btnAv_Click(object sender, EventArgs args)
+        {
+            MessageBox.Show("btnAv");
+        }
+        private void btnIU_Click(object sender, EventArgs args)
+        {
+            MessageBox.Show("btnIU");
+        }
+        private void btnMT_Click(object sender, EventArgs args)
+        {
+            MessageBox.Show("btnMT");
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
